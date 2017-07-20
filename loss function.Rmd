@@ -1,19 +1,19 @@
 
 
 fspl
-Exprime la perte en Bel et en db (valeurs négatives)
+Exprime la perte en Bel et en db (valeurs nÃ©gatives)
 data : data frame
-d : distance entre l'emetteur et le recepteur (en metres)
-f : frequence du signal (en hertz) 
-c = la vitesse de la lumiere dans le vide, estimee a 2.99792458 x 10^8 metres par secondes
+d : distance entre l'emetteur et le recepteur (en metres) ; 
+f : frequence du signal (en hertz) ;
+c = la vitesse de la lumiere dans le vide, estimee a 2.99792458 x 10^8 metres par secondes ; 
 
 
 Lbf
-Exprime le gain de perte en Bel et en db (valeurs positives)
-data : data frame
-d : distance entre l'emetteur et le recepteur (en metres)
-f : frequence du signal (en hertz) 
-lambda = c / f ; longueur d'onde du signal (en metres)
+Exprime le gain de perte en Bel et en db (valeurs positives) ; 
+data : data frame ;
+d : distance entre l'emetteur et le recepteur (en metres) ; 
+f : frequence du signal (en hertz) ; 
+lambda = c / f ; longueur d'onde du signal (en metres) ; 
 
 
 dbm
@@ -41,7 +41,7 @@ dbm <- function(x, dbW, loss){
 ```
 
 
-Simulation d'un data frame, colonne 1 = Distances en metres, colonne 2 = valeurs en dbWatts, colonne 3 = Frequences en herz
+Simulation d'un data frame, colonne 1 = distances en metres, colonne 2 = valeurs en dbWatts, colonne 3 = Frequences en herz
 ```{r}
 
 M <- as.data.frame(cbind(distance = +abs(rnorm(100,mean=0,sd=1)*1000),dbW = abs(rnorm(100, mean = 0, sd = 1)*10), frequence = sample(c(700, 800, 900, 1800, 2600)*10^6, 100, replace = TRUE)))
