@@ -23,9 +23,8 @@ f : frequence du signal (en hertz)
 
 lambda = c / f ; longueur d'onde du signal (en metres)
 
+dBm : conversion de la perte en dbm :
 
-dbm
-conversion de la perte en dbm :
 Puissance_dBm=dbW+30 - Lbf
 
 ```{r}
